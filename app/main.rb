@@ -7,11 +7,4 @@ require 'app/scene/hello_world/title.rb'
 require 'app/scene/hello_world/start.rb'
 require 'app/scene/hello_world.rb'
 
-$scene = Scene::HelloWorld.build
-
-def tick(args)
-  grid = args.grid
-  outputs = args.outputs
-
-  $scene.(grid, outputs)
-end
+require 'app/start.rb'
