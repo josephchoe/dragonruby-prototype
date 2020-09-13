@@ -4,6 +4,7 @@ require 'app/primitive/label.rb'
 
 require 'app/scene/hello_world/background.rb'
 require 'app/scene/hello_world/title.rb'
+require 'app/scene/hello_world/start.rb'
 require 'app/scene/hello_world.rb'
 
 $scene = Scene::HelloWorld.build
