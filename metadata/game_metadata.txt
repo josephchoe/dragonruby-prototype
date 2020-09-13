@@ -1,0 +1,6 @@
+devid=josephchoe
+devtitle=Joseph Choe
+gameid=helloworld
+gametitle=Hello World
+version=0.1
+icon=metadata/icon.png

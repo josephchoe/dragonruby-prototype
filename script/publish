@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pushd ..
+trap popd EXIT
+
+exec ./dragonruby-publish --only-package
