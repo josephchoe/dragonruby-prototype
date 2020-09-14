@@ -1,6 +1,28 @@
 #!/bin/bash
 
-pushd ..
+set -eu
+
+echo
+echo "Building Game"
+echo "= = ="
+echo
+
+echo "DRAGONRUBY_DIR: $DRAGONRUBY_DIR"
+echo
+
+echo "Copying game directory"
+echo "- - -"
+echo
+
+rm -rf $DRAGONRUBY_DIR/mygame
+mkdir $DRAGONRUBY_DIR/mygame
+cp -a `ls -A | grep -v "\(script\|.git\)"` $DRAGONRUBY_DIR/mygame
+
+echo "Building game..."
+echo "- - -"
+echo
+
+pushd $DRAGONRUBY_DIR
 trap popd EXIT
 
 exec ./dragonruby-publish --only-package

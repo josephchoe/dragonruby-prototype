@@ -1,6 +1,22 @@
 #!/bin/bash
 
-pushd ..
+set -eu
+
+echo
+echo "Running Game"
+echo "= = ="
+echo
+
+echo "DRAGONRUBY_DIR: $DRAGONRUBY_DIR"
+echo
+
+current_working_directory=$(pwd)
+
+echo "Running game..."
+echo "- - -"
+echo
+
+pushd $DRAGONRUBY_DIR
 trap popd EXIT
 
-exec ./dragonruby
+exec ./dragonruby $current_working_directory
